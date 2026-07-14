@@ -72,7 +72,7 @@ const F = (t, b) => ({ t, b });             // fg run
   });
   s.addText([
     { text: "$ ", options: { color: MUTED, breakLine: false } },
-    { text: "npm install -g @anthropic-ai/claude-code", options: { color: ACCENT } },
+    { text: "irm https://claude.ai/install.ps1 | iex", options: { color: ACCENT } },
   ], {
     x: 0.9, y: 3.15, w: W - 1.8, h: 0.8,
     fontFace: MONO, fontSize: 24, margin: 0,
@@ -84,7 +84,7 @@ const F = (t, b) => ({ t, b });             // fg run
     x: 0.9, y: 6.15, w: W - 1.8, h: 0.9,
     fontFace: MONO, fontSize: 14, margin: 0, lineSpacing: 22,
   });
-  s.addNotes("While people settle in, have them install Claude Code. Requires Node 18+.");
+  s.addNotes("While people settle in, have them install Claude Code. PowerShell one-liner, no prerequisites. (macOS/Linux: curl -fsSL https://claude.ai/install.sh | bash)");
 }
 
 // ------------------------------------------------- 2. new kind of assistant
@@ -134,7 +134,8 @@ slide("pick your model", [
   [F("fable"), M("            a mythos model — use it with /advisor")],
   [F("")],
   [A("← →"), M("              inside /model: set reasoning effort")],
-  [M("                 (low / medium / high)")],
+  [M("                 (low / medium / high / xhigh)")],
+  [M("                 xhigh: max thinking — save it for the hard bugs")],
 ], {
   lineSpacing: 36, bodySize: 18,
   notes: "Sonnet as the daily driver; switch to Opus (or raise effort) only when the problem deserves it.",
